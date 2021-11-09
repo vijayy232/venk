@@ -3,4 +3,4 @@
   become: true
   tasks: 
   - name: create a directory
-    file: dest=/home/ansible state=touch mode=0700
+    file: dest=/home/ansible/welcome.txt state=touch mode=0700
