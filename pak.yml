@@ -1,0 +1,6 @@
+---
+- hosts: all
+  become: true
+  tasks: 
+  - name: create a directory
+    file: dest=/home/harish state=touch mode=0700
