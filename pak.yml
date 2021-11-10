@@ -16,4 +16,4 @@
      image: alpine
      tty: true
   - name: update the container
-    command: docker exec alpine_testing  /bin/sh -c "apk update"
+    command: docker exec alpine_testing  /bin/sh -c "apk update && touch wow"
