@@ -4,3 +4,16 @@
   tasks: 
   - name: create a directory
     file: dest=/home/ansible/welcome.txt state=touch mode=0700
+  - name: create content
+    copy:
+     dest: /home/ansible/welcome.txt
+     content: |
+              This is a new entertainment
+              of the program to the world
+  - name: create docker container
+    docker_container:
+     name: alpine_testing
+     image: alpine
+     tty: true
+  - name: update the container
+    command: docker exec alpine_testing  /bin/sh -c "apk update"
